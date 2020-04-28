@@ -1,0 +1,17 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:thefrugaldev/data-structures-and-algorithms.git",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "jest": "^25.4.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  }
+}
