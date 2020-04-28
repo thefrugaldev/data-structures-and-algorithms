@@ -2,10 +2,12 @@ import QuickFind from "./quick-find";
 
 describe("QuickFind", () => {
   describe("Find", () => {
-    it("New instance should return false", () => {
-      const quickFind = new QuickFind(10);
+    describe("New instance", () => {
+      it("Should return false", () => {
+        const quickFind = new QuickFind(10);
 
-      expect(quickFind.find(1, 3)).toBe(false);
+        expect(quickFind.find(1, 3)).toBe(false);
+      });
     });
 
     it("Same values should return true", () => {
@@ -18,7 +20,7 @@ describe("QuickFind", () => {
   });
 
   describe("Union", () => {
-    it("Union should set first value equal to second value", () => {
+    it("Should set first argument's value equal to second argument's value", () => {
       const quickFind = new QuickFind(10);
 
       quickFind.union(4, 3);
@@ -27,7 +29,7 @@ describe("QuickFind", () => {
       expect(quickFind.disjointSet[4]).toBe(3);
     });
 
-    it("Union should update all existing connected values", () => {
+    it("Should update all existing connected values", () => {
       const quickFind = new QuickFind(10);
 
       quickFind.union(4, 5);

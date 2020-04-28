@@ -1,4 +1,6 @@
-class QuickFind {
+import DisjointSet from "./DisjointSet";
+
+class QuickFind implements DisjointSet {
   disjointSet: number[];
 
   constructor(quantity: number) {
