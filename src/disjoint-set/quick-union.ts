@@ -18,7 +18,7 @@ class QuickUnion implements DisjointSet {
   }
 
   private isDirectChild(p: number, q: number) {
-    return this.disjointSet[p] === this.disjointSet[q];
+    return this.disjointSet[p] === q;
   }
 
   connected(p: number, q: number): boolean {

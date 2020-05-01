@@ -1,6 +1,6 @@
 import DisjointSet from "./DisjointSet";
 
-class WeightedQuickUnion implements DisjointSet {
+class WeightedQuickUnionPathCompression implements DisjointSet {
   disjointSet: number[];
   size: number[];
 
@@ -16,13 +16,16 @@ class WeightedQuickUnion implements DisjointSet {
 
   private root(valueToCheck: number): number {
     while (this.disjointSet[valueToCheck] !== valueToCheck) {
+      this.disjointSet[valueToCheck] = this.disjointSet[
+        this.disjointSet[valueToCheck]
+      ];
       valueToCheck = this.disjointSet[valueToCheck];
     }
 
     return valueToCheck;
   }
 
-  private isDirectChild(p: number, q: number): boolean {
+  isDirectChild(p: number, q: number): boolean {
     return this.disjointSet[p] === q;
   }
 
@@ -48,4 +51,4 @@ class WeightedQuickUnion implements DisjointSet {
   }
 }
 
-export default WeightedQuickUnion;
+export default WeightedQuickUnionPathCompression;
