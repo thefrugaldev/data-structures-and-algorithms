@@ -6,7 +6,7 @@ describe("QuickFind", () => {
       it("Should return false", () => {
         const quickFind = new QuickFind(10);
 
-        expect(quickFind.find(1, 3)).toBe(false);
+        expect(quickFind.connected(1, 3)).toBe(false);
       });
     });
 
@@ -15,7 +15,7 @@ describe("QuickFind", () => {
 
       quickFind.disjointSet[1] = 3;
 
-      expect(quickFind.find(1, 3)).toBe(true);
+      expect(quickFind.connected(1, 3)).toBe(true);
     });
   });
 

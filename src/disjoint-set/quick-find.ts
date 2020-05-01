@@ -9,7 +9,7 @@ class QuickFind implements DisjointSet {
     for (let i = 0; i < quantity; i++) this.disjointSet[i] = i;
   }
 
-  find = (p: number, q: number): boolean => {
+  connected = (p: number, q: number): boolean => {
     return this.disjointSet[p] === this.disjointSet[q];
   };
 
