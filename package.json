@@ -5,7 +5,7 @@
   "repository": "git@github.com:thefrugaldev/data-structures-and-algorithms.git",
   "license": "MIT",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
